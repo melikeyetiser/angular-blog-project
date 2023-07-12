@@ -1,64 +1,53 @@
-button {
+button{
   align-items: center;
-  background-color: #b1a6e9;
-  border: 2px solid #111;
-  border-radius: 8px;
+  background-color: #fff;
+  border: 2px solid #000;
   box-sizing: border-box;
-  color: #111;
+  color: #000;
   cursor: pointer;
-  display: flex;
+  display: inline-flex;
+  fill: #000;
   font-family: Inter,sans-serif;
   font-size: 16px;
+  font-weight: 600;
   height: 48px;
   justify-content: center;
+  letter-spacing: -.8px;
   line-height: 24px;
-  max-width: 100%;
-  padding: 0 25px;
-  position: relative;
+  min-width: 140px;
+  outline: 0;
+  padding: 0 17px;
   text-align: center;
   text-decoration: none;
+  transition: all .3s;
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
+}
+
+button:focus {
+  color: #171e29;
+}
+
+button:hover {
+  border-color: rgb(60, 8, 250);
+  color: rgb(60, 8, 250);
+  fill: rgb(60, 8, 250);
+}
+
+button:active {
+  border-color: rgb(0, 255, 102);
+  color: rgb(0, 255, 102);
+  fill: rgb(0, 255, 102);
+}
+
+@media (min-width: 768px) {
+  button {
+    min-width: 170px;
+  }
 }
 
 div{
     display: inline-block;
     padding: 0 10px;
 }
-
-button:after {
-  background-color: #111;
-  border-radius: 8px;
-  content: "";
-  display: block;
-  height: 48px;
-  left: 0;
-  width: 100%;
-  position: absolute;
-  top: -2px;
-  transform: translate(8px, 8px);
-  transition: transform .1s ease-out;
-  z-index: -1;
-}
-
-button:hover:after {
-  transform: translate(0, 0);
-}
-
-button:active {
-  background-color: #978988;
-  outline: 0;
-}
-
-button:hover {
-  outline: 0;
-}
-
-@media (min-width: 768px) {
-  button {
-    padding: 0 40px;
-  }
-}
-
-

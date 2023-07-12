@@ -1,0 +1,47 @@
+table {
+    width: 60%;
+    table-layout: auto;
+}
+
+table thead th {
+    text-align: center;
+    border: 1px groove rgb(60, 8, 250);
+    color: #1e2cecbe;
+    border-width: medium;
+}
+
+
+table tbody td {
+    border: 1px dotted rgb(60, 8, 250);
+    border-width: medium;
+}
+
+table tbody td:first-child {
+    width: 50px;
+}
+
+.pagination-buttons {
+    margin-top: 15px;
+    text-align: right;
+}
+
+.pagination-buttons button {
+    margin: 0 5px;
+}
+
+.pagination-buttons button:last-child {
+    margin-right: 0;
+}
+
+.create-btn {
+    text-align: right;
+    margin: 15px 0;
+}
+
+.create-btn a.btn {
+    padding: 5px 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #333;
+}

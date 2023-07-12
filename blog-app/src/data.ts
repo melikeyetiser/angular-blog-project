@@ -4,27 +4,37 @@ const userList: Users[] = [
     {
       user_id: 1,
       username: "john_1",
-      email: "johnny42@gmail.com"
+      email: "johnny42@gmail.com",
+      creation_date: "2001-03-09",
+      is_active: true
     },
     {
       user_id: 2,
       username: "qwerty",
-      email: "mu@hotmail.com"
+      email: "mu@hotmail.com",
+      creation_date: "2000-11-12",
+      is_active: false
     },
     {
       user_id: 3,
       username: "persona",
-      email: "someone@gmail.com"
+      email: "someone@gmail.com",
+      creation_date: "2009-02-07",
+      is_active: false
     },
     {
       user_id: 4,
       username: "sputnik",
-      email: "sput1@yandex.com"
+      email: "sput1@yandex.com",
+      creation_date: "2011-05-09",
+      is_active: true
     },
     {
       user_id: 5,
       username: "userx",
-      email: "someoneelse@gmail.com"
+      email: "someoneelse@gmail.com",
+      creation_date: "2005-03-06",
+      is_active: true
     }
   ]
 
