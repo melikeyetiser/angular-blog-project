@@ -1,9 +1,9 @@
 <div class="menu-container">
-    <div class="with-top-margin">
-        <div class="right-center">
-            <app-button [buttonText]="'Add New User'" [routerLink]="'/users/add'"></app-button>
-        </div>
+    
+    <div class="right-center">
+        <app-button [buttonText]="'Add New User'" [routerLink]="'/users/add'"></app-button>
     </div>
+
 
     <div style="overflow-x:auto;">
         <table>
@@ -26,8 +26,9 @@
                     <td> {{ user.creation_date}} </td>
                     <td> {{ user.is_active }} </td>
                     <td>
-                        <button [textContent]="'Edit User'"></button>
-                        <button [textContent]="'Delete User'"></button>
+                        <app-button class="small" [buttonText]="'Edit User'" [routerLink]="'/users/edit'" (onButtonClick)="userService.selectedUser(user.username)"></app-button>
+                        
+                        <app-button class="small" [buttonText]="'Delete User'" (onButtonClick)="userService.deleteUser(user.user_id)"></app-button>
                     </td>
                 </tr>
             </tbody>

@@ -1,0 +1,48 @@
+<div class="'with-top-margin'">
+
+
+    <div class="container">
+        <h2> Add New Post </h2>
+
+        <label>User ID: </label>
+        <div>
+            <input type="user_id" [(ngModel)]="user_id">
+        </div>
+
+        <label>Category ID: </label>
+        <div>
+            <input type="category_id" [(ngModel)]="category_id">
+        </div>
+
+        <label>Title: </label>
+        <div>
+            <input type="title" [(ngModel)]="title">
+        </div>
+
+        <label>View Count: </label>
+        <div>
+            <input type="view_count" [(ngModel)]="view_count">
+        </div>
+
+        <label>Creation Date: </label>
+        <div>
+            <input type="creation_date" [(ngModel)]="creation_date" placeholder="yyyy-mm-dd">
+        </div>
+
+        <label>Is Published: </label>
+        <div>
+            <input type="is_published" [(ngModel)]="is_published" placeholder="true/false">
+        </div>
+
+        <label>Content: </label>
+        <div>
+            <input type="content" [(ngModel)]="content">
+        </div>
+        <div class="with-top-margin"> 
+            <app-button [buttonText]="'Submit'" routerLink="/posts" (onButtonClick)="postService.addPost(user_id,category_id,title,view_count,creation_date,is_published,content)"> </app-button>
+        </div>
+    </div>
+
+    
+
+</div>

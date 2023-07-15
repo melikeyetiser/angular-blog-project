@@ -4,20 +4,26 @@ import { CommentComponent } from './comment/comment.component';
 import { UserComponent } from './user/user.component';
 import { PostComponent } from './post/post.component';
 import { CategoryComponent } from './category/category.component';
-import { NotFoundComponent } from './not-found/not-found.component';
-import { HomepageComponent } from './homepage/homepage.component';
-import { AddUserComponent } from './add-user/add-user.component';
-
+import { NotFoundComponent } from './model/not-found/not-found.component';
+import { HomepageComponent } from './model/homepage/homepage.component';
+import { AddUserComponent } from './user/add-user/add-user.component';
+import { EditUserComponent } from './user/edit-user/edit-user.component';
+import { AddPostComponent } from './post/add-post/add-post.component';
+import { EditPostComponent } from './post/edit-post/edit-post.component';
+import { PostDetailsComponent } from './post/post-details/post-details.component';
 
 const routes: Routes = [
   {path: 'home', component: HomepageComponent},
   {path: 'comments', component: CommentComponent},
   {path: 'users', component: UserComponent},
   {path: 'users/add', component: AddUserComponent},
+  {path: 'users/edit', component: EditUserComponent},
   {path: 'posts', component: PostComponent},
+  {path: 'posts/add', component: AddPostComponent},
+  {path: 'posts/edit', component: EditPostComponent},
+  {path: 'posts/details', component: PostDetailsComponent},
   {path: 'categories', component: CategoryComponent},
   {path: '**', component: NotFoundComponent}
-
 ];
 
 @NgModule({

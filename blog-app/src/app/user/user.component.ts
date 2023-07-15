@@ -12,16 +12,12 @@ import { UserService } from '../services/user.service';
 export class UserComponent {
   users: Users[] = userList;
 
-  constructor(private route: ActivatedRoute,
-    private router: Router, private userService: UserService){
-    
-
-  }
-
   pageIndex: number = 0;
   pageSize: number = 15;
 
   isPreviousButtonDisabled: boolean = false;
   isNextButtonDisabled: boolean = false;
-  
+  constructor(public userService: UserService){
+    
+  }
 }

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 //import { BehaviorSubject } from 'rxjs';
-import { Posts } from '../blogInterfaces';
+import { Posts } from '../../blogInterfaces';
 
 @Component({
   selector: 'app-table',

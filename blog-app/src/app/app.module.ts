@@ -1,26 +1,29 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ButtonComponent } from './button/button.component';
-import { HeaderComponent } from './header/header.component';
-import { TableComponent } from './table/table.component';
-import { NavbarComponent } from './navbar/navbar.component';
+import { TableComponent } from './model/table/table.component';
+import { NavbarComponent } from './model/navbar/navbar.component';
 import { PostComponent } from './post/post.component';
 import { UserComponent } from './user/user.component';
 import { CommentComponent } from './comment/comment.component';
 import { CategoryComponent } from './category/category.component';
-import { NotFoundComponent } from './not-found/not-found.component';
-import { UserDetailsComponent } from './user-details/user-details.component';
-import { HomepageComponent } from './homepage/homepage.component';
-import { AddUserComponent } from './add-user/add-user.component';
+import { NotFoundComponent } from './model/not-found/not-found.component';
+import { UserDetailsComponent } from './user/user-details/user-details.component';
+import { HomepageComponent } from './model/homepage/homepage.component';
+import { AddUserComponent } from './user/add-user/add-user.component';
+import { EditUserComponent } from './user/edit-user/edit-user.component';
+import { AddPostComponent } from './post/add-post/add-post.component';
+import { EditPostComponent } from './post/edit-post/edit-post.component';
+import { PostDetailsComponent } from './post/post-details/post-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ButtonComponent,
-    HeaderComponent,
     TableComponent,
     NavbarComponent,
     PostComponent,
@@ -30,11 +33,16 @@ import { AddUserComponent } from './add-user/add-user.component';
     NotFoundComponent,
     UserDetailsComponent,
     HomepageComponent,
-    AddUserComponent
+    AddUserComponent,
+    EditUserComponent,
+    AddPostComponent,
+    EditPostComponent,
+    PostDetailsComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

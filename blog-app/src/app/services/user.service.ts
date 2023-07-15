@@ -14,25 +14,43 @@ export class UserService {
   private users: Users[] = userList;
   private posts: Posts[] = postList;
   private comments: Comments[] = commentList;
+  private userNumber: number = this.users.length;
+  private selectedUser_name: string = '';
 
-  constructor() { }
+  constructor() {
 
-  addUser(user: Users): void {
-    user.user_id = userList.length + 1;
+  }
+
+  addUser(username1: string, email1: string, creation_date1: string, is_active1: string): void {
+
+    const is_active2: boolean = is_active1 === 'true';
+    const user: Users = {
+      user_id: this.getUserNumber(),
+      username: username1,
+      email: email1,
+      creation_date: creation_date1,
+      is_active: is_active2
+    }
+    user.user_id = this.userNumber + 1;
+    this.userNumber++;
     this.users.push(user);
   }
 
-  updateUser(id: number, user: Users): void {
+  updateUser(username1: string, email1: string, creation_date1: string, is_active1: string): void {
     const _user = this.users.find((_user: Users) => {
-      return _user.user_id == id;
+      return _user.username == this.selectedUser_name;
     });
 
+    const is_active2: boolean = is_active1 === 'true';
     if (_user) {
-      _user.username = user.username;
-      _user.email = user.email;
-      _user.is_active = user.is_active;
-      _user.creation_date = user.creation_date;
+      _user.username = username1;
+      _user.email = email1;
+      _user.is_active = is_active2;
+      _user.creation_date = creation_date1;
     }
+  }
+  selectedUser(name: string){
+    this.selectedUser_name = name;
   }
 
   getUserByID(id: number): Users | undefined {
@@ -58,12 +76,19 @@ export class UserService {
       return _user.user_id == id;
     });
 
-    if (this.getCommentsByUserID(id) != null &&
-      this.getPostsByUserID(id) != null && userList.length != 1) {
+    if (this.getCommentsByUserID(id) == null &&
+      this.getPostsByUserID(id) == null && userList.length != 1) {
       this.users.splice(userIndex, 1);
     } else {
       throw new Error("This user cannot be deleted!");
     }
   }
 
+  getUsers() {
+    return this.users;
+  }
+
+  getUserNumber() {
+    return this.userNumber;
+  }
 }

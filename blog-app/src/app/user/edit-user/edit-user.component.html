@@ -1,0 +1,34 @@
+<div class="'with-top-margin'">
+
+
+    <div class="container">
+        <h2> Edit User </h2>
+
+        
+        <label>User Name: </label>
+        <div>
+            <input type="username" [(ngModel)] = "username" >
+        </div>
+
+        <label>Email: </label>
+        <div>
+            <input type="email" [(ngModel)] = "email">
+        </div>
+
+        <label>Creation Date: </label>
+        <div>
+            <input type="creation_date" [(ngModel)] = "creation_date">
+        </div>
+
+        <label>Is Active: </label>
+        <div>
+            <input type="is_active" [(ngModel)] = "is_active" placeholder="true/false">
+        </div>
+        <div class="with-top-margin"> 
+            <app-button [buttonText]="'Submit'" routerLink="/users" (onButtonClick)="userService.updateUser(username, email, creation_date, is_active)"> </app-button>
+        </div>
+    </div>
+
+    
+
+</div>

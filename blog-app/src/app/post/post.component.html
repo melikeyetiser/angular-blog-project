@@ -1,9 +1,9 @@
 <div class="menu-container">
-    <div class="with-top-margin">
-        <div class="right-center">
-            <app-button [buttonText]="'Add New Post'" [routerLink]="'/posts/add'"></app-button>
-        </div>
+
+    <div class="right-center">
+        <app-button [buttonText]="'Add New Post'" [routerLink]="'/posts/add'"></app-button>
     </div>
+
 
     <div style="overflow-x:auto;">
         <table>
@@ -31,11 +31,11 @@
                     <td> {{ post.creation_date}} </td>
                     <td> {{ post.is_published }} </td>
                     <td>
-                        <button [textContent]="'Details'"></button>
+                        <app-button class="small" [routerLink]="'/posts/details'" [buttonText]="'Details'" (onButtonClick)="postService.selectedPost(post.post_id)"></app-button>
                     </td>
                     <td>
-                        <button [textContent]="'Edit'"></button>
-                        <button [textContent]="'Delete'"></button>
+                        <app-button  class="small" [routerLink]="'/posts/edit'" [buttonText]="'Edit'" (onButtonClick)="postService.selectedPost(post.post_id)"></app-button>
+                        <app-button  class="small"  [buttonText]="'Delete'" (onButtonClick)="postService.deletePost(post.post_id)"></app-button>
                     </td>
                 </tr>
             </tbody>
