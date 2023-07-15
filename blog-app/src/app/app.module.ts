@@ -14,6 +14,7 @@ import { CategoryComponent } from './category/category.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
 import { HomepageComponent } from './homepage/homepage.component';
+import { AddUserComponent } from './add-user/add-user.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { HomepageComponent } from './homepage/homepage.component';
     CategoryComponent,
     NotFoundComponent,
     UserDetailsComponent,
-    HomepageComponent
+    HomepageComponent,
+    AddUserComponent
   ],
   imports: [
     BrowserModule,

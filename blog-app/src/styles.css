@@ -1,9 +1,55 @@
 /* You can add global styles to this file, and also import other style files */
 .center {
-        justify-content: center;
-        display: flex;
-  }
+  justify-content: center;
+  display: flex;
+}
+
+.right-center {
+  justify-content: flex-end;
+  display: flex;
+}
 
 body {
-    background-color: rgb(206, 205, 195);
+  background-color: rgb(206, 205, 195);
+}
+
+.with-top-margin {
+  margin-top: 70px;
+}
+
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: large;
+  background-color: #e7deff;
+  padding: 30px;
+  margin-top: 5%;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgb(60, 8, 250);
+  text-align: center;
+}
+
+.menu-container {
+  max-width: 80%;
+  margin: 0 auto;
+  font-size: large;
+  background-color: #e7deff;
+  padding: 30px;
+  margin-top: 5%;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgb(60, 8, 250);
+  text-align: center;
+}
+
+.container-left-centered{
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: large;
+  background-color: #e7deff;
+  padding: 30px;
+  margin-top: 5%;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgb(60, 8, 250);
+  text-align: left;
 }

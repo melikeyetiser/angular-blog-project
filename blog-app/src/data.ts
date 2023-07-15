@@ -3,7 +3,7 @@ import { Categories, Comments, Posts, Users } from "./app/blogInterfaces";
 const userList: Users[] = [
     {
       user_id: 1,
-      username: "john_1",
+      username: "john1",
       email: "johnny42@gmail.com",
       creation_date: "2001-03-09",
       is_active: true
@@ -24,8 +24,8 @@ const userList: Users[] = [
     },
     {
       user_id: 4,
-      username: "sputnik",
-      email: "sput1@yandex.com",
+      username: "jane",
+      email: "jane66@yandex.com",
       creation_date: "2011-05-09",
       is_active: true
     },
@@ -35,6 +35,13 @@ const userList: Users[] = [
       email: "someoneelse@gmail.com",
       creation_date: "2005-03-06",
       is_active: true
+    },
+    {
+      user_id: 6,
+      username: "sdads",
+      email: "gaegadfd@gmail.com",
+      creation_date: "2011-07-23",
+      is_active: false
     }
   ]
 

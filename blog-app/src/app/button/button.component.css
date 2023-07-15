@@ -1,4 +1,4 @@
-button{
+button {
   align-items: center;
   background-color: rgb(175, 153, 255);
   box-sizing: border-box;
@@ -6,7 +6,7 @@ button{
   cursor: pointer;
   display: inline-flex;
   fill: #000;
-  font-family: Inter,sans-serif;
+  font-family: Inter, sans-serif;
   font-size: 16px;
   font-weight: 600;
   height: 48px;
@@ -36,7 +36,7 @@ button:hover {
 button:active {
   background-color: rgb(96, 53, 252);
   color: rgb(255, 255, 255);
-  
+
 }
 
 @media (min-width: 768px) {
@@ -45,32 +45,58 @@ button:active {
   }
 }
 
-div{
-    display: inline-block;
+div {
+  display: inline-block;
 }
 
-.pagination-buttons {
+.pagination-btn {
   margin-top: 15px;
   text-align: right;
 }
 
-.pagination-buttons button {
+.pagination-btn button {
   margin: 0 5px;
 }
 
-.pagination-buttons button:last-child {
+.pagination-btn button:last-child {
   margin-right: 0;
 }
 
-.create-btn {
+.action-btn {
   text-align: right;
-  margin: 15px 0;
+  margin-top: 50px;
+
+  align-items: center;
+  background-color: #e7deff;
+  border: 2px solid #e7deff;
+  box-sizing: border-box;
+  color: #000000;
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  letter-spacing: -.8px;
+  outline: 0;
+  padding: 0 17px;
+  text-align: center;
+  transition: all .3s;
+
 }
 
-.create-btn a.btn {
-  padding: 5px 15px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  text-decoration: none;
-  color: #333;
+.action-btn:focus {
+  color: #171e29;
+}
+
+.action-btn:hover {
+  background-color: rgb(175, 153, 255);
+  border-color: rgb(175, 153, 255);
+  fill: rgb(175, 153, 255);
+}
+
+.action-btn:active {
+  background-color: rgb(60, 8, 250);
+  border-color: rgb(175, 153, 255);
+  fill: rgb(175, 153, 255);
+  color: beige;
 }
