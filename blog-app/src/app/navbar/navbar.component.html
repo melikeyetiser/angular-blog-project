@@ -1,5 +1,7 @@
-<p> </p>
-<app-button [buttonText]="'Users'"></app-button>
-<app-button [buttonText]="'Posts'"> </app-button>
-<app-button [buttonText]="'Comments'"></app-button>
-<app-button [buttonText]="'Categories'"></app-button>
+<div class="navbar">
+    <app-button [buttonText]="'Home'" [routerLink]="'home'" ></app-button>
+    <app-button [buttonText]="'Users'" [routerLink]="'users'"></app-button>
+    <app-button [buttonText]="'Posts'" [routerLink]="'posts'"> </app-button>
+    <app-button [buttonText]="'Comments'" [routerLink]="'comments'"></app-button>
+    <app-button [buttonText]="'Categories'" [routerLink]="'categories'"></app-button>
+</div>

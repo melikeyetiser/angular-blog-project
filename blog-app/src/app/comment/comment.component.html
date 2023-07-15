@@ -1,0 +1,30 @@
+<div style="overflow-x:auto;">
+    <table>
+        <caption>
+            <h2>Comments</h2>
+        </caption>
+        <thead>
+            <tr>
+                <th> ID </th>
+                <th>Post ID</th>
+                <th>User ID</th>
+                <th> Comment </th>
+                <th> Creation Date </th>
+                <th> Is Confirmed</th>
+                <th></th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let comment of comments" class="row">
+                <td> {{ comment.comment_id }} </td>
+                <td> {{ comment.post_id }} </td>   
+                <td> {{ comment.user_id }} </td>
+                <td> {{ comment.comment }} </td>
+                <td> {{ comment.creation_date }} </td>
+                <td> {{ comment.is_confirmed }} </td>
+                <td> Details </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

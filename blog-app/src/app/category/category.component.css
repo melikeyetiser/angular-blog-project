@@ -16,7 +16,6 @@ table thead th {
     background: #000;
     padding: 10px;
     border: 1px solid rgb(175, 153, 255);
-
 }
 
 table tbody td {
@@ -26,6 +25,10 @@ table tbody td {
 }
 
 table tbody:hover {
+    background-color: #b399fc !important;
+}
+
+.highlight{
     background-color: #b399fc !important;
 }
 

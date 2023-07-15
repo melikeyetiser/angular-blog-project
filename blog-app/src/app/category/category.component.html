@@ -1,0 +1,21 @@
+<div style="overflow-x:auto;">
+    <table>
+        <thead>
+            <tr>
+                <th> ID </th>
+                <th> Category Name </th>
+                <th> Creation Date </th>
+                <th></th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let cat of categories" class="row">
+                <td> {{ cat.category_id }} </td>
+                <td> {{ cat.name }} </td>   
+                <td> {{ cat.creation_date}} </td>
+                <td> Details </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

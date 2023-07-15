@@ -41,52 +41,52 @@ const userList: Users[] = [
 const categoryList: Categories[] = [
     {
       category_id: 1,
-      name: "local news",
+      name: "Local News",
       creation_date: "2013-12-20"
     },
     {
       category_id: 2,
-      name: "health",
+      name: "Health",
       creation_date: "null"
     },
     {
       category_id: 3,
-      name: "politics",
+      name: "Politics",
       creation_date: "2017-12-03"
     },
     {
       category_id: 4,
-      name: "sports",
+      name: "Sports",
       creation_date: "2018-03-05"
     },
     {
       category_id: 5,
-      name: "culture",
+      name: "Culture",
       creation_date: "2016-01-03"
     },
     {
       category_id: 6,
-      name: "world news",
+      name: "World News",
       creation_date: "2021-09-11"
     },
     {
       category_id: 7,
-      name: "design",
+      name: "Design",
       creation_date: "2020-07-07"
     },
     {
       category_id: 8,
-      name: "technology",
+      name: "Technology",
       creation_date: "2022-05-01"
     },
     {
       category_id: 9,
-      name: "food",
+      name: "Food",
       creation_date: "2023-10-05"
     },
     {
       category_id: 10,
-      name: "others",
+      name: "Others",
       creation_date: "2023-02-09"
     }
   ] 

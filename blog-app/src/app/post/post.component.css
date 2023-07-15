@@ -29,6 +29,10 @@ table tbody:hover {
     background-color: #b399fc !important;
 }
 
+.highlight{
+    background-color: #b399fc !important;
+}
+
 table tbody:nth-child(even) {
     background-color: #e7deff;
 }
