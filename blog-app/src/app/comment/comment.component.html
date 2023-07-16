@@ -1,27 +1,41 @@
-<div style="overflow-x:auto;">
-    <table>
-        <thead>
-            <tr>
-                <th> ID </th>
-                <th>Post ID</th>
-                <th>User ID</th>
-                <th> Comment </th>
-                <th> Creation Date </th>
-                <th> Is Confirmed</th>
-                <th></th>
-            </tr>
-        </thead>
+<div class="menu-container">
 
-        <tbody>
-            <tr *ngFor="let comment of comments" class="row">
-                <td> {{ comment.comment_id }} </td>
-                <td> {{ comment.post_id }} </td>   
-                <td> {{ comment.user_id }} </td>
-                <td> {{ comment.comment }} </td>
-                <td> {{ comment.creation_date }} </td>
-                <td> {{ comment.is_confirmed }} </td>
-                <td> Details </td>
-            </tr>
-        </tbody>
-    </table>
+    <div class="right-center">
+        <app-button [buttonText]="'Add New Comment'" [routerLink]="'/comments/add'"></app-button>
+    </div>
+
+    <div style="overflow-x:auto;">
+        <table>
+            <thead>
+                <tr>
+                    <th> ID </th>
+                    <th>Post ID</th>
+                    <th>User ID</th>
+                    <th> Comment </th>
+                    <th> Creation Date </th>
+                    <th> Is Confirmed</th>
+                    <th>Details</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr *ngFor="let comment of comments" class="row">
+                    <td> {{ comment.comment_id }} </td>
+                    <td> {{ comment.post_id }} </td>
+                    <td> {{ comment.user_id }} </td>
+                    <td> {{ comment.comment }} </td>
+                    <td> {{ comment.creation_date }} </td>
+                    <td> {{ comment.is_confirmed }} </td>
+                    <td>
+                        <app-button class="small" [routerLink]="'/comments/details'" [buttonText]="'Details'"></app-button>
+                    </td>
+                    <td>
+                        <app-button class="small" [buttonText]="'Delete'" (onButtonClick)="commentService.deleteComment(comment.comment_id)"></app-button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
 </div>

@@ -26,9 +26,8 @@
                     <td> {{ user.creation_date}} </td>
                     <td> {{ user.is_active }} </td>
                     <td>
-                        <app-button class="small" [buttonText]="'Edit User'" [routerLink]="'/users/edit'" (onButtonClick)="userService.selectedUser(user.username)"></app-button>
-                        
-                        <app-button class="small" [buttonText]="'Delete User'" (onButtonClick)="userService.deleteUser(user.user_id)"></app-button>
+                        <app-button class="action-btn" [buttonText]="'Edit'" [routerLink]="'/users/edit'" (onButtonClick)="userService.selectedUser(user.username)"></app-button>
+                        <app-button class="action-btn" [buttonText]="'Delete'" (onButtonClick)="userService.deleteUser(user.user_id)"></app-button>
                     </td>
                 </tr>
             </tbody>

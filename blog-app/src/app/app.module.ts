@@ -19,6 +19,10 @@ import { EditUserComponent } from './user/edit-user/edit-user.component';
 import { AddPostComponent } from './post/add-post/add-post.component';
 import { EditPostComponent } from './post/edit-post/edit-post.component';
 import { PostDetailsComponent } from './post/post-details/post-details.component';
+import { AddCommentComponent } from './comment/add-comment/add-comment.component';
+import { CommentDetailsComponent } from './comment/comment-details/comment-details.component';
+import { AddCategoryComponent } from './category/add-category/add-category.component';
+import { EditCategoryComponent } from './category/edit-category/edit-category.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +41,11 @@ import { PostDetailsComponent } from './post/post-details/post-details.component
     EditUserComponent,
     AddPostComponent,
     EditPostComponent,
-    PostDetailsComponent
+    PostDetailsComponent,
+    AddCommentComponent,
+    CommentDetailsComponent,
+    AddCategoryComponent,
+    EditCategoryComponent
   ],
   imports: [
     BrowserModule,

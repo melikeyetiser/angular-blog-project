@@ -13,4 +13,9 @@ import { BehaviorSubject, Observable, Subscription, map, tap } from 'rxjs';
 })
 export class CategoryComponent {
   categories: Categories[] = categoryList;
+
+
+  constructor(public categoryService: CategoryService){
+    
+  }
 }

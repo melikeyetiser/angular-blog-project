@@ -1,0 +1,25 @@
+<div class="'with-top-margin'">
+
+
+    <div class="container">
+        <h2> Edit Category </h2>
+
+        <label>Category Name: </label>
+        <div>
+            <input type="name" [(ngModel)]="name">
+        </div>
+
+
+        <label>Creation Date: </label>
+        <div>
+            <input type="creation_date" [(ngModel)]="creation_date" placeholder="yyyy-mm-dd">
+        </div>
+
+        <div class="with-top-margin"> 
+            <app-button [buttonText]="'Submit'" routerLink="/categories" (onButtonClick)="categoryService.updateCategory(name,creation_date)"> </app-button>
+        </div>
+    </div>
+
+    
+
+</div>

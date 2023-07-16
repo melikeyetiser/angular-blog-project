@@ -1,0 +1,42 @@
+<div class="'with-top-margin'">
+
+
+    <div class="container">
+        <h2> Add New Comment </h2>
+        
+        <label>Post ID: </label>
+        <div>
+            <input type="post_id" [(ngModel)]="post_id">
+        </div>
+
+        <label>User ID: </label>
+        <div>
+            <input type="user_id" [(ngModel)]="user_id">
+        </div>
+
+        <label>Comment: </label>
+        <div>
+            <input type="comment" [(ngModel)]="comment">
+        </div>
+
+        <label>Creation Date: </label>
+        <div>
+            <input type="creation_date" [(ngModel)]="creation_date" placeholder="yyyy-mm-dd">
+        </div>
+
+        <label>Is Confirmed: </label>
+        <div>
+            <input type="is_confirmed" [(ngModel)]="is_confirmed" placeholder="true/false">
+        </div>
+
+       
+        <div class="with-top-margin">
+            <app-button [buttonText]="'Submit'" routerLink="/comments"
+                (onButtonClick)="commentService.addComment(post_id,user_id,comment,creation_date,is_confirmed)">
+            </app-button>
+        </div>
+    </div>
+
+
+
+</div>

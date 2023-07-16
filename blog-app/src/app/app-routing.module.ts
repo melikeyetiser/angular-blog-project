@@ -11,10 +11,16 @@ import { EditUserComponent } from './user/edit-user/edit-user.component';
 import { AddPostComponent } from './post/add-post/add-post.component';
 import { EditPostComponent } from './post/edit-post/edit-post.component';
 import { PostDetailsComponent } from './post/post-details/post-details.component';
+import { AddCommentComponent } from './comment/add-comment/add-comment.component';
+import { CommentDetailsComponent } from './comment/comment-details/comment-details.component';
+import { AddCategoryComponent } from './category/add-category/add-category.component';
+import { EditCategoryComponent } from './category/edit-category/edit-category.component';
 
 const routes: Routes = [
   {path: 'home', component: HomepageComponent},
   {path: 'comments', component: CommentComponent},
+  {path: 'comments/add', component: AddCommentComponent},
+  {path: 'comments/details', component: CommentDetailsComponent},
   {path: 'users', component: UserComponent},
   {path: 'users/add', component: AddUserComponent},
   {path: 'users/edit', component: EditUserComponent},
@@ -23,6 +29,8 @@ const routes: Routes = [
   {path: 'posts/edit', component: EditPostComponent},
   {path: 'posts/details', component: PostDetailsComponent},
   {path: 'categories', component: CategoryComponent},
+  {path: 'categories/add', component: AddCategoryComponent},
+  {path: 'categories/edit', component: EditCategoryComponent},
   {path: '**', component: NotFoundComponent}
 ];
 

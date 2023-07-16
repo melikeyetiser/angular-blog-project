@@ -24,10 +24,11 @@ button {
   touch-action: manipulation;
 }
 
-button.small{
-  font-size: 4px !important;
-  height: 10px !important;
-  min-width: 20px !important;
+
+@media (min-width: 768px) {
+  button {
+    min-width: 50px;
+  }
 }
 
 button:focus {
@@ -45,11 +46,7 @@ button:active {
 
 }
 
-@media (min-width: 768px) {
-  button {
-    min-width: 170px;
-  }
-}
+
 
 div {
   display: inline-block;
@@ -70,24 +67,28 @@ div {
 
 .action-btn {
   text-align: right;
-  margin-top: 50px;
 
   align-items: center;
-  background-color: #e7deff;
+  background-color: #e7deff !important;
   border: 2px solid #e7deff;
   box-sizing: border-box;
   color: #000000;
   cursor: pointer;
   display: inline-flex;
-  font-size: 16px;
+  font-size: 6px;
   font-weight: 600;
   justify-content: center;
   letter-spacing: -.8px;
   outline: 0;
-  padding: 0 17px;
+  padding: 0 5px;
   text-align: center;
   transition: all .3s;
 
+  font-size: 4px !important;
+  height: 10px !important;
+  min-width: 5px !important;
+  max-width: 10px;
+  line-height: 10px !important;
 }
 
 .action-btn:focus {

@@ -25,9 +25,6 @@ table tbody td {
     border: 1px solid rgb(60, 8, 250);
 }
 
-table tbody:hover {
-    background-color: #b399fc !important;
-}
 
 .highlight{
     background-color: #b399fc !important;

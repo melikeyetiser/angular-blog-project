@@ -32,6 +32,7 @@ export class PostService {
     }
     this.posts.push(post);
   }
+  
   updatePost(user_id: number,category_id:number,title:string,view_count:number,
     creation_date:string,is_published1:string,content:string){
       const _post = this.posts.find((_post: Posts) => {
@@ -39,7 +40,7 @@ export class PostService {
       }); 
       const is_published2: boolean = is_published1 === 'true';
       if (_post) {
-        _post.post_id = 0;
+        _post.post_id = this.selectedPost_id;
         _post.user_id = user_id;
         _post.category_id = category_id;
         _post.title = title;
@@ -49,6 +50,7 @@ export class PostService {
         _post.is_published = is_published2;
       }
   }
+  
   selectedPost(id:number){
     this.selectedPost_id = id;
   }
@@ -74,13 +76,25 @@ export class PostService {
   getPosts() {
     return this.posts;
   }
-  getPostDetails(){
-    const _post = this.posts.find((_post: Posts) => {
-      return _post.post_id == this.selectedPost_id;
-    }); 
+  getPostDetails(id: number){
+    const _post = this.getPostByID(this.selectedPost_id);
+
     if (_post){
-    return _post.content;
+      const str: string = "Post Id: ";
+    return str.concat(_post.post_id.toString(), ", User Id: ",_post.user_id.toString(), ", Category Id: ", _post.category_id.toString(),
+    ", Title: ", _post.title, 
+    ", Content: ", _post.content, ",\n View Count: ", _post.view_count.toString(), 
+    ",\n Creation Date: ", _post.creation_date);
+
+
     }else return null;
+  }
+
+  getPostByID(id:number){
+    const _post = this.posts.find((_post: Posts) => {
+      return _post.post_id == id;
+    }); 
+    return _post;
   }
 
 

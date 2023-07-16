@@ -30,6 +30,18 @@ body {
   text-align: center;
 }
 
+.container-white {
+  max-width: 300px;
+  margin: 0 auto;
+  font-size: large;
+  background-color: #ffffff;
+  padding: 30px;
+  margin-top: 5%;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgb(60, 8, 250);
+  text-align: center;
+}
+
 .menu-container {
   max-width: 80%;
   margin: 0 auto;
