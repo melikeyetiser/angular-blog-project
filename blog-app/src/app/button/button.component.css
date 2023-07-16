@@ -100,10 +100,3 @@ div {
   border-color: rgb(175, 153, 255);
   fill: rgb(175, 153, 255);
 }
-
-.action-btn:active {
-  background-color: rgb(60, 8, 250);
-  border-color: rgb(175, 153, 255);
-  fill: rgb(175, 153, 255);
-  color: beige;
-}
