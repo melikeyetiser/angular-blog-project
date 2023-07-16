@@ -1,6 +1,11 @@
 <div class="container">
     <h1>Comment Detail</h1>
-    <div class="container-white"> 
-        <p> </p>
+    <div class="container-white" [textContent]="commentService.getCommentDetails()"> 
+        
+    </div>
+
+    <div class="with-top-margin">
+        <app-button [buttonText]="'Return'" routerLink="/comments">
+        </app-button>
     </div>
 </div>

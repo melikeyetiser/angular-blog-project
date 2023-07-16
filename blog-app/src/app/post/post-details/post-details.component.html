@@ -1,6 +1,21 @@
 <div class="container">
     <h1>Post Detail</h1>
-    <div class="container-white"> 
-        <p [textContent]="postService.getPostDetails(1)"> </p>
+    <div class="container-white">
+        <p [textContent]="postService.getPostDetails()"> </p>
+    </div>
+
+    <div *ngIf="postService.getCommentsofPosts() != null" class="container-white"
+        [innerText]="postService.getCommentsofPosts()">
+    </div>
+
+    <!-- we give a warning if there are no comments to show -->
+    <div *ngIf="postService.getCommentsofPosts() === null" class="container-white">
+        <p>There are no comments for this post.</p>
+    </div>
+
+
+    <div class="with-top-margin">
+        <app-button [buttonText]="'Return'" routerLink="/posts">
+        </app-button>
     </div>
 </div>

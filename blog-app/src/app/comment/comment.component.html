@@ -20,7 +20,7 @@
             </thead>
 
             <tbody>
-                <tr *ngFor="let comment of comments" class="row">
+                <tr *ngFor="let comment of comments | slice: (pageIndex * pageSize): ((pageIndex * pageSize) + pageSize)" >
                     <td> {{ comment.comment_id }} </td>
                     <td> {{ comment.post_id }} </td>
                     <td> {{ comment.user_id }} </td>
@@ -28,7 +28,8 @@
                     <td> {{ comment.creation_date }} </td>
                     <td> {{ comment.is_confirmed }} </td>
                     <td>
-                        <app-button class="small" [routerLink]="'/comments/details'" [buttonText]="'Details'"></app-button>
+                        <!-- save the selected comment using the comment service on the service component -->
+                        <app-button class="small" [routerLink]="'/comments/details'" [buttonText]="'Details'" (onButtonClick)="commentService.selectComment(comment.comment_id)"></app-button>
                     </td>
                     <td>
                         <app-button class="small" [buttonText]="'Delete'" (onButtonClick)="commentService.deleteComment(comment.comment_id)"></app-button>
@@ -36,6 +37,19 @@
                 </tr>
             </tbody>
         </table>
+
+        <div class="pagination-buttons">
+            <button type="button"
+                (click)="handlePreviousPageButton()"
+                [disabled]="pageIndex === 0">
+                Previous
+            </button>
+            <button type="button"
+                (click)="handleNextPageButton()"
+                [disabled]="pageIndex === totalPage - 1">
+                Next
+            </button>
+        </div>
     </div>
 
 </div>

@@ -1,3 +1,4 @@
+// fields are written in snake case because they were created this way in the sql homework
 export interface Users {
     user_id: number;
     username: string;

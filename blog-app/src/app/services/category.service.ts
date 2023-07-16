@@ -15,6 +15,7 @@ export class CategoryService {
   }
 
   categories: Categories[] = categoryList;
+  // category IDs are monotonically increasing so we do not take it as an input and instead determine it here
   private newCategoryID: number = this.categories.length + 1;
 
   addCategory(name: string, creation_date: string){

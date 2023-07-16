@@ -22,7 +22,7 @@
             </thead>
 
             <tbody>
-                <tr *ngFor="let post of posts" class="row">
+                <tr *ngFor="let post of posts | slice: (pageIndex * pageSize): ((pageIndex * pageSize) + pageSize)">
                     <td> {{ post.post_id }} </td>
                     <td> {{ post.user_id }} </td>
                     <td> {{ post.category_id }} </td>
@@ -40,5 +40,18 @@
                 </tr>
             </tbody>
         </table>
+
+        <div class="pagination-buttons">
+            <button type="button"
+                (click)="handlePreviousPageButton()"
+                [disabled]="pageIndex === 0">
+                Previous
+            </button>
+            <button type="button"
+                (click)="handleNextPageButton()"
+                [disabled]="pageIndex === totalPage - 1">
+                Next
+            </button>
+        </div>
     </div>
 </div>

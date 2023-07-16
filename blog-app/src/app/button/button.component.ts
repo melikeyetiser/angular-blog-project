@@ -10,7 +10,8 @@ import { ConnectionService } from '../connection.service';
 export class ButtonComponent {
   @Input() buttonText:string = "";
   @Output() onButtonClick = new EventEmitter<void>();
-  //@Input() buttonType: 'action-btn' | 'pagination-btn' = 'action-btn';
+
+  @Input() buttonType: 'action-btn' | 'pagination-btn' = 'action-btn';
 
   connected$: BehaviorSubject<boolean>;
 

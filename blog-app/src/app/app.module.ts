@@ -5,14 +5,12 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ButtonComponent } from './button/button.component';
-import { TableComponent } from './model/table/table.component';
 import { NavbarComponent } from './model/navbar/navbar.component';
 import { PostComponent } from './post/post.component';
 import { UserComponent } from './user/user.component';
 import { CommentComponent } from './comment/comment.component';
 import { CategoryComponent } from './category/category.component';
 import { NotFoundComponent } from './model/not-found/not-found.component';
-import { UserDetailsComponent } from './user/user-details/user-details.component';
 import { HomepageComponent } from './model/homepage/homepage.component';
 import { AddUserComponent } from './user/add-user/add-user.component';
 import { EditUserComponent } from './user/edit-user/edit-user.component';
@@ -28,14 +26,12 @@ import { EditCategoryComponent } from './category/edit-category/edit-category.co
   declarations: [
     AppComponent,
     ButtonComponent,
-    TableComponent,
     NavbarComponent,
     PostComponent,
     UserComponent,
     CommentComponent,
     CategoryComponent,
     NotFoundComponent,
-    UserDetailsComponent,
     HomepageComponent,
     AddUserComponent,
     EditUserComponent,

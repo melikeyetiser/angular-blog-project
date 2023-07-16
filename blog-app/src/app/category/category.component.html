@@ -16,16 +16,30 @@
             </thead>
 
             <tbody>
-                <tr *ngFor="let cat of categories" class="row">
+                <tr *ngFor="let cat of categories | slice: (pageIndex * pageSize): ((pageIndex * pageSize) + pageSize)" class="row">
                     <td> {{ cat.category_id }} </td>
                     <td> {{ cat.name }} </td>
                     <td> {{ cat.creation_date}} </td>
                     
                     <td>
+                        <!-- we save the selected category on button click -->
                         <app-button class="small" [buttonText]="'Edit'" (onButtonClick)="categoryService.selectCategory(cat.category_id)" routerLink="/categories/edit"></app-button>
                     </td>
                 </tr>
             </tbody>
         </table>
+
+        <div class="pagination-buttons">
+            <button type="button"
+                (click)="handlePreviousPageButton()"
+                [disabled]="pageIndex === 0">
+                Previous
+            </button>
+            <button type="button"
+                (click)="handleNextPageButton()"
+                [disabled]="pageIndex === totalPage - 1">
+                Next
+            </button>
+        </div>
     </div>
 </div>

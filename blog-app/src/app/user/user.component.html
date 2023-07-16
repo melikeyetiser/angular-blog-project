@@ -1,8 +1,15 @@
 <div class="menu-container">
-    
+
     <div class="right-center">
         <app-button [buttonText]="'Add New User'" [routerLink]="'/users/add'"></app-button>
     </div>
+
+    <div *ngIf="userService.flag">
+        <div *ngIf="userService.isUserDeletable(userService.selectedUserID) == true">
+            <h3>This user cannot be deleted!</h3>
+        </div>
+    </div>
+
 
 
     <div style="overflow-x:auto;">
@@ -19,18 +26,29 @@
             </thead>
 
             <tbody>
-                <tr *ngFor="let user of users" class="row">
+                <tr *ngFor="let user of users | slice: (pageIndex * pageSize): ((pageIndex * pageSize) + pageSize)"
+                    class="row">
                     <td> {{ user.user_id }} </td>
                     <td> {{ user.username }} </td>
                     <td> {{ user.email}} </td>
                     <td> {{ user.creation_date}} </td>
                     <td> {{ user.is_active }} </td>
                     <td>
-                        <app-button class="action-btn" [buttonText]="'Edit'" [routerLink]="'/users/edit'" (onButtonClick)="userService.selectedUser(user.username)"></app-button>
-                        <app-button class="action-btn" [buttonText]="'Delete'" (onButtonClick)="userService.deleteUser(user.user_id)"></app-button>
+                        <app-button class="action-btn" [buttonText]="'Edit'" [routerLink]="'/users/edit'"
+                            (onButtonClick)="userService.selectedUser(user.username)"></app-button>
+                        <app-button class="action-btn" [buttonText]="'Delete'"
+                            (onButtonClick)="userService.deleteUser(user.user_id)"></app-button>
                     </td>
                 </tr>
             </tbody>
         </table>
+        <div>
+            <button type="pagination-btn" (click)="handlePreviousPageButton()" [disabled]="pageIndex === 0">
+                Previous
+            </button>
+            <button type="pagination-btn" (click)="handleNextPageButton()" [disabled]="pageIndex === totalPage - 1">
+                Next
+            </button>
+        </div>
     </div>
 </div>

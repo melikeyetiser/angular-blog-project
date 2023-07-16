@@ -1,5 +1,6 @@
 import { Categories, Comments, Posts, Users } from "./app/blogInterfaces";
     
+// every data is stored and imported from here
 const userList: Users[] = [
     {
       user_id: 1,
